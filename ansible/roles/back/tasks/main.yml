@@ -1,0 +1,11 @@
+- name: Launch Backend
+  docker_container:
+    name: my-api
+    image: etiennegg27/tp-devops-simple-api
+    state: started
+    ports:
+      - "8080:8080"
+    networks:
+      - name: my-network
+
+  tags: back

@@ -1,0 +1,11 @@
+- name: Launch proxy
+  docker_container:
+    name: httpd
+    image: etiennegg27/tp-devops-http-server
+    state: started
+    ports:
+      - "80:80"
+    networks:
+      - name: my-network
+
+  tags: proxy

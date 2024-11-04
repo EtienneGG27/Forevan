@@ -1,0 +1,10 @@
+- name: Launch Database
+  docker_container:
+    name: my-db
+    image: etiennegg27/tp-devops-database
+    state: started
+
+    networks:
+      - name: my-network
+
+  tags: database
